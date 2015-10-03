@@ -30,7 +30,7 @@ function sio(server) {
 		socket.on('notice', function(data) {
 			// すべてのクライアントへ通知を送信
 			// ブロードキャスト
-			socket.sockets.emit('recieve', {
+			sio.sockets.emit('recieve', {
 				type : data.type,
 				user : data.user,
 				value : data.value,
